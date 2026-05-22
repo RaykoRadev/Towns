@@ -40,4 +40,13 @@ function shuffleTowns() {
             array[j] = oldElement;
         }
     }
+    if (removed) showMessage(townName + " deleted.");
+    else showMessage(townName + " not found.");
+}
+
+function showMessage(msg) {
+    $("#result").text(msg).css("display", "block");
+    setTimeout(function () {
+        $("#result").hide("blind", {}, 500);
+    }, 3000);
 }
